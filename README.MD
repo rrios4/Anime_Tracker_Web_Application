@@ -1,7 +1,6 @@
 Author: Rogelio Rios
 Class : CIS 4339
 Title: AnimeBinX
-README
 ----------------------------------------------------------
 
 How to Run
@@ -14,7 +13,7 @@ How to Run
 
 Setting up MongoDB Server
 ----------------------------------------------------------
-That I have no data at all, when you use the application as intended like creating account and adding anime to the watching list it will create a collection by itself for users and watching list to the localhost database under the db name called “animebin”. Also, mongoDb should be run in localhost with port 27017 .
+I have no data at all, when you use the application as intended like creating account and adding anime to the watching list it will create a collection by itself for users and watching list to the localhost database under the db name called “animebin”. Also, mongoDb should be run in localhost with port 27017 .
 
 (1)	How to Install MongoDB on Windows 10 - YouTube  https://youtu.be/FwMwO8pXfq0
 
