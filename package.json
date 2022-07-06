@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/app.js",
     "client": "cd client && npm run serve",
-    "build": "cd client && npm run build && mv dist ../server/dist",
+    "build1": "cd client && npm run build && mv dist ../server/dist",
     "dist": "cd client && mv dist ../server/dist",
     "server": "nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
