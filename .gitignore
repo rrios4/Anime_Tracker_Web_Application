@@ -1,6 +1,7 @@
 # Project Folders
 node_modules
 .env
+client/dist
 
 # Project Files
 Anime_Tracker_Google_Search.png
