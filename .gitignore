@@ -1,5 +1,6 @@
 # Project Folders
 node_modules
+.env
 
 # Project Files
 Anime_Tracker_Google_Search.png

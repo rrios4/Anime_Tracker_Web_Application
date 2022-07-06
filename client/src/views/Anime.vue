@@ -117,7 +117,7 @@ export default {
       this.token = localStorage.getItem("token");
       const resultById = await JinkaAPI.getAnimeById(id);
       console.log(resultById);
-      await Axios.post('http://localhost:5000/api/user/addtowatching', resultById, {headers: { token : localStorage.getItem("token")}})
+      await Axios.post(`http://${process.env.VUE_APP_BACKEND_URL}/api/user/addtowatching`, resultById, {headers: { token : localStorage.getItem("token")}})
         .then((res) => {
           if(res.status === 200 ){
             Swal.fire({

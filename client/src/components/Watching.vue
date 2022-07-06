@@ -96,7 +96,7 @@ export default {
     },
     //Method that deletes a anime from the watching list by passing the id to the url and using axios to make a delete request
     async deleteAnime(id){
-      const url = `http://localhost:5000/api/user/${id}`;
+      const url = `http://${process.env.VUE_APP_BACKEND_URL}/api/user/${id}`;
       await Axios.delete(url, {headers: {token: localStorage.getItem("token")}})
         .then((res) => {
           if(res.status === 200){
@@ -122,7 +122,7 @@ export default {
       const json = {
         epcounter: `${subtraction}`
       }
-      const patch_url = `http://localhost:5000/api/user/${id}`
+      const patch_url = `http://${process.env.VUE_APP_BACKEND_URL}/api/user/${id}`
       await Axios.put(patch_url, json);
       this.watchingList = await WatchingService.getWatching();
 
@@ -135,7 +135,7 @@ export default {
       const json = {
         epcounter: `${sum}`
       }
-      const url = `http://localhost:5000/api/user/increase/${id}`;
+      const url = `http://${process.env.VUE_APP_BACKEND_URL}/api/user/increase/${id}`;
       await Axios.put(url,json);
       this.watchingList = await WatchingService.getWatching();
 

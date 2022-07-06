@@ -72,7 +72,7 @@ export default {
   async mounted() {
     //On load it gets the users info by sending a request to my API
     await axios
-      .get("http://localhost:5000/api/user/userinfo", {
+      .get(`http://${process.env.VUE_APP_BACKEND_URL}/api/user/userinfo`, {
         headers: { token: localStorage.getItem("token") },
       })
       .then((res) => {

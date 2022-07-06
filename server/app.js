@@ -4,31 +4,30 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 //const logger = require('logger');
+require('dotenv').config()
 
 // init the express app
 const app = express();
 
 // This is the connection that connects to a localhosted mongodb and creastes a db named animebin
-mongoose.connect('mongodb://localhost:27017/animebin', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true})
+// mongoose.connect('mongodb://localhost:27017/animebin', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true})
+//     .then(result => {
+//         console.log('Connected to mongoDB');
+//     }) 
+//     .catch((error) => {
+//         console.error(error);
+//     });
+
+// Connect to the mongodb 
+const url = process.env.MONGODB_URL;
+console.log('Connecting to MONGODB Server...  ', url);
+    mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
     .then(result => {
-        console.log('Connected to mongoDB');
-    }) 
+        console.log('Connected to MongoDB!');
+    })
     .catch((error) => {
         console.error(error);
     });
-
-// Connect to the mongodb 
-//const url = process.env.MONGODB_URI;
-//console.log('Connecting to MONGODB Server... ', url);
-/*
-    mongoose.connect('mongodb+srv://rxr348:yRnnVCBcX602UAFA@web-development-learnin.d2bql.mongodb.net/animebin?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
-    .then(result => {
-        console.log('Connected to MongoDB');
-    })
-    .catch((error) => {
-        console.log('Error connecting to MongoDB');
-    });
-*/
 
 
 

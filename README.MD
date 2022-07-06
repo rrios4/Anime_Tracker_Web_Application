@@ -19,6 +19,19 @@ I have no data at all, when you use the application as intended like creating ac
 
 Using that video above I set up my localhost database in my computer follow the same steps in the video up to 5 minute and replicate it to you own computer to be able make my program to have access to locahost:27017 database.
 
+Environment Variables
+----------------------------------------------------------
+The server and client aspects of the web application depend on sensitive information in order to connect to MongoDB server and node server which include data as port number and machine URL.<br />
+**Path**: ./.env<br />
+NODE_ENV=<br />
+PORT=5001<br />
+MONGODB_URL=mongodb+srv://**user**:**password**@web-development-learnin.d2bql.mongodb.net/**database**?retryWrites=true&w=majority
+<br /><br />
+**Path**: ./client/.env.local<br />
+Vue Server: <br />
+VUE_APP_BASE_URL=localhost:8080<br />
+VUE_APP_BACKEND_URL=localhost:5001<br />
+
 Notes for CIS 4339
 ----------------------------------------------------------
 
