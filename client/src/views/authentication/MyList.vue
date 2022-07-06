@@ -83,7 +83,7 @@ export default {
   },
   async mounted() {
     await axios
-      .get(`http://${process.env.VUE_APP_BACKEND_URL}/api/user/userinfo`, {
+      .get(`${process.env.VUE_APP_BACKEND_URL}/api/user/userinfo`, {
         headers: { token: localStorage.getItem("token") },
       })
       .then((res) => {

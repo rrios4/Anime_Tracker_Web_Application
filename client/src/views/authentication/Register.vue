@@ -155,7 +155,7 @@ export default {
           password: this.password,
           dob: this.dob,
       }
-     await axios.post(`http://${process.env.VUE_APP_BACKEND_URL}/api/user/register`, userReg)
+     await axios.post(`${process.env.VUE_APP_BACKEND_URL}/api/user/register`, userReg)
       .then((res) => {
         if(res.status === 200){
             Swal.fire({

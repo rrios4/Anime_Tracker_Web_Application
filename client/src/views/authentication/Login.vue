@@ -137,7 +137,7 @@ export default {
         email: this.email,
         password: this.password,
       };
-      await axios.post(`http://${process.env.VUE_APP_BACKEND_URL}/api/user/login`, userLogin).then(
+      await axios.post(`${process.env.VUE_APP_BACKEND_URL}/api/user/login`, userLogin).then(
         (res) => {
           if (res.status === 200) {
             localStorage.setItem("token", res.data.token);

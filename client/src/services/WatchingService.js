@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const watchingURL = `http://${process.env.VUE_APP_BACKEND_URL}/api/user/watching`;
+const watchingURL = `${process.env.VUE_APP_BACKEND_URL}/api/user/watching`;
 
 class WatchingService {
   // Get Watching List from mongo and maps it in json for the user to see in the front end
