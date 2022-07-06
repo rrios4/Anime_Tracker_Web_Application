@@ -20,7 +20,7 @@ const app = express();
 
 // Connect to the mongodb 
 const url = process.env.MONGODB_URL;
-console.log('Connecting to MONGODB Server...  ', url);
+console.log('Connecting to MONGODB Server...  ');
     mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
     .then(result => {
         console.log('Connected to MongoDB!');
