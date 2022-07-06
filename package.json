@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/app.js",
     "client": "cd client && npm run serve",
-    "build": "cd client && npm install && npm i @vue/cli && npm run build && mv dist ../server/dist",
+    "build": "cd client && npm i @vue/cli && npm install && npm run build && mv dist ../server/dist",
     "heroku-postinstall": "cd client && npm install && npm run build",
     "server": "nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
